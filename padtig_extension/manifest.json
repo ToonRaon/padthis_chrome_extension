@@ -1,0 +1,16 @@
+{
+	"name": "퍼즐앤드래곤 디스이즈게임 확장 프로그램",
+	"version": "1.0",
+	"manifest_version": 2,
+	"icons": { "128": "icon.png" },
+	"description": "퍼즐앤드래곤 디스이즈게임 사이트에 편의 기능을 추가하고 버그를 해결합니다.",
+	"content_scripts": [
+		{
+			"matches": ["http://www.thisisgame.com/pad/*"],
+			"js": ["jquery-3.4.1.min.js", "content.js"],
+			"css": ["content.css"],
+			"run_at": "document_end"
+		}
+	],
+	"permissions": ["http://www.thisisgame.com/pad/*"]
+}
